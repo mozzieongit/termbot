@@ -1,6 +1,110 @@
 # Change Log
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](https://semver.org/).
+
+## [1.9.13][1.9.13]
+### Added
+- Add database foreign key constraints with cascade deletes (by Steffen Heil | secforge)
+- Add support for ChaCha20 cipher
+
+### Changed
+- Update targetSdkVersion to 35
+- Convert the build system to Kotlin
+- Opt out of edge-to-edge display for now
+
+### Fixed
+- Make PromptHelper more reliable
+
+### Translations
+- Update translations
+
+### Dependencies
+- Update dependencies
+
+## [1.9.12][1.9.12]
+### Changed
+- Updated to API 34
+- Set foreground service type to "remote messaging"
+
+## [1.9.11][1.9.11]
+### Fixed
+- Fix Persistent notification no longer working (#1352) (by rcheze)
+
+### Added
+- Allow connecting to IPv6 Link-local addresses (by Antonis Kanouras)
+
+### Changed
+- Update to a newer sshlib with fixes for EdDSA providers in Google Play Services
+- Configure Ed25519 key generation to use 255 bits
+- Add reference to monochrome icon (by Niklas Höher)
+- Improve Proguard rules by ignoring `@Nullable` annotations
+- Upload native debug symbols during build
+- Pin GitHub Actions to use macOS 13 to avoid emulator issues
+- Pin all used GitHub Actions for improved security and reproducibility
+- Improve and update CI/CD workflows
+
+### Translations
+- Add Turkmen translations
+- Automated translation imports from Launchpad
+- Fix translations export tool
+
+### Dependencies
+- Update dependencies
+
+## [1.9.10][1.9.10]
+### Fixed
+- Allow underscores in the hostmask (by Brian J. Murrell)
+- Fix click failure for emulated keys on Android > 12 when scrolling to max position (by Andreas Richter)
+- Fix accidental size bloat in Play Store release build
+- Fix issues with the remote signing workflow in CI/CD
+
+### Changed
+- Update sshlib to 2.2.22 for mitigation against the Terrapin attack
+- Update sshlib to 2.2.23 to fix transitive dependencies from Tink
+- Update the Android SDK to the newest version (targetSdkVersion 33)
+- Update Android Gradle Plugin to 7.2.2
+- Improve build configuration
+- Improve CI/CD workflows
+- Update translations installation workflow
+
+### Added
+- Monochrome app icon support (by JFronny)
+
+### Translations
+- Automated translation imports from Launchpad
+
+### Dependencies
+- Update dependencies
+
+## [1.9.9][1.9.9]
+### Fixed
+- Fix text selection for certain font sizes (by Pavel Roskin)
+- Fix lint warnings (by Hannes Achleitner)
+
+### Changed
+- Simplified code (by Hannes Achleitner)
+- Update to Gradle 7.2
+- Set compileSdkVersion to 31
+- Simplify NDK (by Hannes Achleitner)
+- Move to upstream android-emulator-runner
+- Exclude accessibility testing (related to Espresso dependency update)
+
+### Translations
+- Updated some Finnish translations (by Perry Thompson)
+- Automated translation imports from Launchpad
+- Translation infrastructure updates (export with new CLDR, use new plurals from CLDR)
+
+### Dependencies
+- Update dependencies
+
+## [1.9.8][1.9.8]
+### Fixed
+- Issue on some MediaTek phones where arithmetic errors show up
+  when connecting using Ed25519.
+
+## [1.9.7][1.9.7]
+### Fixed
+- Added support for rsa-sha2-512 by updating sshlib
 
 ## [1.9.6][1.9.6]
 ### Fixed
@@ -78,6 +182,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Color picker color numbers are now localized
 
 
+[1.9.13]: https://github.com/connectbot/connectbot/compare/v1.9.12...v1.9.13
+[1.9.12]: https://github.com/connectbot/connectbot/compare/v1.9.11...v1.9.12
+[1.9.11]: https://github.com/connectbot/connectbot/compare/v1.9.10...v1.9.11
+[1.9.10]: https://github.com/connectbot/connectbot/compare/v1.9.9...v1.9.10
+[1.9.9]: https://github.com/connectbot/connectbot/compare/v1.9.8...v1.9.9
+[1.9.8]: https://github.com/connectbot/connectbot/compare/v1.9.7...v1.9.8
+[1.9.7]: https://github.com/connectbot/connectbot/compare/v1.9.6...v1.9.7
+[1.9.6]: https://github.com/connectbot/connectbot/compare/v1.9.5...v1.9.6
+[1.9.5]: https://github.com/connectbot/connectbot/compare/v1.9.4...v1.9.5
 [1.9.0-alpha1]: https://github.com/connectbot/connectbot/compare/v1.8.6...v1.9.0-alpha1
 [1.8.6]: https://github.com/connectbot/connectbot/compare/v1.8.5...v1.8.6
 [1.8.5]: https://github.com/connectbot/connectbot/compare/v1.8.4...v1.8.5

@@ -7,12 +7,13 @@ on:
 jobs:
   copy:
     name: Copy to po-files
+    if: github.repository_owner == 'connectbot'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Push subdirectory
-        uses: s0/git-publish-subdir-action@develop
+        uses: s0/git-publish-subdir-action@ac113f6bfe8896e85a373534242c949a7ea74c98 # develop
         env:
           REPO: self
           BRANCH: po-files
