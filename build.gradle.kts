@@ -35,7 +35,7 @@ allprojects {
 }
 
 spotless {
-    ratchetFrom = "origin/main"
+    ratchetFrom = "personal/termbot"
 
     java {
         target("app/src/main/java/org/connectbot/**/*.java")
